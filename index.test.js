@@ -3,6 +3,7 @@ const utils = require("./index");
 describe("[Exercise 1] trimProperties", () => {
   test("[1] returns an object with the properties trimmed", () => {
     // EXAMPLE
+<<<<<<< HEAD
     const input = { foo: "  foo ", bar: "bar ", baz: " baz" };
     const expected = { foo: "foo", bar: "bar", baz: "baz" };
     const actual = utils.trimProperties(input);
@@ -14,6 +15,20 @@ describe("[Exercise 1] trimProperties", () => {
     expect(input).toEqual({ foo: "  foo ", bar: "bar ", baz: " baz" });
   });
 });
+=======
+    const input = { foo: '  foo ', bar: 'bar ', baz: ' baz' }
+    const expected = { foo: 'foo', bar: 'bar', baz: 'baz' }
+    const actual = utils.trimProperties(input)
+    expect(actual).toEqual(expected)
+  })
+   test('[2] returns a copy, leaving the original object intact', () => {
+    const input = { foo: '  foo ', bar: 'bar ', baz: ' baz' }
+    const actual = utils.trimProperties(input)
+    expect(input).toEqual({ foo: '  foo ', bar: 'bar ', baz: ' baz' })
+   })
+
+})
+>>>>>>> 1f1334ad3a19b4d7662af16b1faaa34a6d31a08f
 
 describe("[Exercise 2] trimPropertiesMutation", () => {
   test("[3] returns an object with the properties trimmed", () => {
